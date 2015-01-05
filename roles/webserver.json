@@ -1,0 +1,19 @@
+{
+  "name": "webserver",
+  "description": "Web Server",
+  "chef_type": "role",
+  "run_list": [ "role[base]", "recipe[apache]" ],
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "apache": {
+      "sites": {
+        "admin": {
+          "port": "8000"
+        },
+        "bears": {
+          "port": "8081"
+        }
+      }
+    }
+  }
+}
